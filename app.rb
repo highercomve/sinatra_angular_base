@@ -10,7 +10,7 @@ require 'mongoid'
 Mongoid.load!("config/mongoid.yml")
 
 # Load every app file, controllers and models
-%w(libs/*.rb backend/models/*.rb).each do |dir|
+%w(backend/libs/*.rb backend/models/*.rb).each do |dir|
   Dir.glob(dir).each do |file|
     require_relative file
   end
